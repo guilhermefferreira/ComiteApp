@@ -13,7 +13,7 @@ public class Atleta {
     private int idatleta;
 
     @Column(name = "nome", nullable = false, length = 50)
-    @Pattern(regexp = "[A-z]{5,50}", message = "O nome é invalido!")
+    @Pattern(regexp = "[A-z ]{5,50}", message = "O nome é invalido!")
     private String nome;
 
     @Column(name = "inscricao", nullable = false, length = 50)
