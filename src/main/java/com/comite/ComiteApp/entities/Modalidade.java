@@ -18,6 +18,7 @@ public class Modalidade {
     private int idModalidade;	
 	
 	@Column(name = "descricao", nullable = false, length = 50)
+	@Pattern(regexp = "[A-z]{5,50}")
 	private String descricao;
 	
 	@Column(name = "data", nullable = false)
