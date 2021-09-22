@@ -19,7 +19,7 @@ public class ModalidadeBiz {
 		
 		
 		boolean result = true;
-		if (modalidade.getDescricao().length() < 0) {
+		if (modalidade.getDescricao().length() < 50) {
 	    	 msg.mensagens.add("Tamanho nao deve ser maior que 50");
 	    	 result = false;
 	     }
