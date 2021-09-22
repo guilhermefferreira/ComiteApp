@@ -12,7 +12,7 @@ import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 @RestController
-@RequestMapping("Atleta")
+@RequestMapping("atleta")
 public class AtletaController {
 
     @Autowired
