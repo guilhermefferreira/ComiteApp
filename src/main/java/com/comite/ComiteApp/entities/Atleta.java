@@ -1,6 +1,7 @@
 package com.comite.ComiteApp.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "Atleta")
@@ -12,6 +13,7 @@ public class Atleta {
     private int idatleta;
 
     @Column(name = "nome", nullable = false, length = 50)
+    @Pattern(regexp = "[A-z].*[A-z].*", message = "O nome é invalido!")
     private String nome;
 
     @Column(name = "inscricao", nullable = false, length = 50)
