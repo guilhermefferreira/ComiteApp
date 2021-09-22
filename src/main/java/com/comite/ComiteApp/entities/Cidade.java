@@ -18,15 +18,12 @@ public class Cidade {
 	private Integer idcidade;
 	
 	
-
-	@Column(name="nome", nullable = false)
-	@Pattern(regexp = "[A-z]{5,50}", message = "O nome é invalido!")
-
+	@Column(name="nome", nullable = false, length = 50)	
+	@Pattern(regexp = "[A-z]{5,50}")
 	private String nome;
 		
 	@Column(name="provincia", nullable = false)
 	@Pattern(regexp = "[A-z]{5,50}", message = "O nome é invalido!")
-
 	private String provincia;
 
 	public Integer getIdcidade() {
