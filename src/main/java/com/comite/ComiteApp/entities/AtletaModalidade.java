@@ -13,6 +13,7 @@ public class AtletaModalidade {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idatletamodalidade")
 	private int idAtletaModalidade;
 	
 	@Column(name = "idatleta", nullable = false)
