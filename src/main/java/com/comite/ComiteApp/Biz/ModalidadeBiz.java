@@ -20,7 +20,7 @@ public class ModalidadeBiz {
 		
 		boolean result = true;
 		if (modalidade.getDescricao().length() < 0) {
-	    	 msg.mensagens.add("O salario nao pode ser negativo");
+	    	 msg.mensagens.add("Tamanho nao deve ser maior que 50");
 	    	 result = false;
 	     }
 		

@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name="cidade")
@@ -17,7 +18,8 @@ public class Cidade {
 	private Integer idcidade;
 	
 	
-	@Column(name="nome", nullable = false)	
+	@Column(name="nome", nullable = false, length = 50)	
+	@Pattern(regexp = "[A-z]{5,50}")
 	private String nome;
 		
 	@Column(name="provincia", nullable = false)
