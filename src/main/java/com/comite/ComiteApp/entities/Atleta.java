@@ -17,4 +17,27 @@ public class Atleta {
     @Column(name = "inscricao", nullable = false, length = 50)
     private String inscricao;
 
+    public int getIdatleta() {
+        return idatleta;
+    }
+
+    public void setIdatleta(int idatleta) {
+        this.idatleta = idatleta;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getInscricao() {
+        return inscricao;
+    }
+
+    public void setInscricao(String inscricao) {
+        this.inscricao = inscricao;
+    }
 }
