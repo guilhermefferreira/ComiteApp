@@ -18,10 +18,10 @@ public class Cidade {
 	
 	
 	@Column(name="nome", nullable = false)	
-	private Integer nome;
+	private String nome;
 		
 	@Column(name="provincia", nullable = false)
-	private Integer provincia;
+	private String provincia;
 
 	public Integer getIdcidade() {
 		return idcidade;
@@ -31,21 +31,23 @@ public class Cidade {
 		this.idcidade = idcidade;
 	}
 
-	public Integer getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(Integer nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-	public Integer getProvincia() {
+	public String getProvincia() {
 		return provincia;
 	}
 
-	public void setProvincia(Integer provincia) {
+	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
+
+	
 
 	
 
