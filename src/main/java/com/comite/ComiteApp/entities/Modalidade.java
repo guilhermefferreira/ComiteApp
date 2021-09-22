@@ -22,7 +22,6 @@ public class Modalidade {
 	private String descricao;
 	
 	@Column(name = "data", nullable = false)
-	@Pattern(regexp = "/^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/", message = "Esta data é inválida")
 	private Date data;
 
 	public int getIdModalidade() {

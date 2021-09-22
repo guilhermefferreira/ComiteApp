@@ -2,6 +2,7 @@ package com.comite.ComiteApp.controller;
 
 import java.util.List;
 
+import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,10 +46,10 @@ public class ModalidadeController {
 			} else {
 				return modalidadeBiz.msg; 
 			}
-		} catch (Exception e) {
-			modalidadeBiz.msg.mensagens.add(e.getMessage());
-			return modalidadeBiz.msg;
-		}
+		} catch (ConstraintViolationException e) {
+		e.getConstraintViolations().forEach(v -> modalidadeBiz.msg.mensagens.add(v.getMessage()));
+		return modalidadeBiz.msg;
+	}
          modalidadeBiz.msg.mensagens.add("OK");
 		
 		return modalidadeBiz.msg;
